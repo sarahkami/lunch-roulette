@@ -1,0 +1,63 @@
+{
+  "locations": [{
+    "id": 1,
+    "name": "Norweger",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 2,
+    "name": "Bestell-Asiate",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 3,
+    "name": "Cocktail-Inder",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 4,
+    "name": "Döner",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 5,
+    "name": "Eule",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 6,
+    "name": "Taschen-Thai",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 7,
+    "name": "Falafel",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 8,
+    "name": "Pizza",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 9,
+    "name": "Boccacelli",
+    "distance": ,
+    "rating": ,
+    "location":
+  }, {
+    "id": 10,
+    "name": "Berlin-Burger",
+    "distance": ,
+    "rating": ,
+    "location":
+  }]
+}
