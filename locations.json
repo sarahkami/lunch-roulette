@@ -1,63 +1,106 @@
-{
-  "locations": [{
+[{
     "id": 1,
     "name": "Norweger",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 45
   }, {
     "id": 2,
     "name": "Bestell-Asiate",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
   }, {
     "id": 3,
     "name": "Cocktail-Inder",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
   }, {
     "id": 4,
     "name": "Döner",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 30
   }, {
     "id": 5,
     "name": "Eule",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 45
   }, {
     "id": 6,
     "name": "Taschen-Thai",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
   }, {
     "id": 7,
     "name": "Falafel",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 30
   }, {
     "id": 8,
     "name": "Pizza",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 45
   }, {
     "id": 9,
     "name": "Boccacelli",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
   }, {
     "id": 10,
     "name": "Berlin-Burger",
-    "distance": ,
-    "rating": ,
-    "location":
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
+  }, {
+    "id": 11,
+    "name": "Designer-Thai",
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
+  }, {
+    "id": 12,
+    "name": "Perser",
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 45
+  }, {
+    "id": 13,
+    "name": "Bibel-Koreaner",
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
+  }, {
+    "id": 14,
+    "name": "La Carne",
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 60
+  }, {
+    "id": 15,
+    "name": "Türke",
+    "distance": "",
+    "rating": "",
+    "location": "",
+    "duration": 30
   }]
-}
