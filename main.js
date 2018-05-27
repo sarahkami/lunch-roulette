@@ -62,6 +62,16 @@ map.(...ein <span> pro Element ausgeben...).join()
 innerhalb der .map funktion brauche ich eine bedingung, ob das Objekt auch in thisWeek ist, dann setze eine bestimmte Klasse
 */
 
+function showAvaliableLocations(lunchLocations, thisWeek){
+  var availableLocations = lunchLocations.map(function(location){
+    if(thisWeek.id === location.id){
+      document.getElementById("availableLocation").className = "notAvailable";
+    }
+    return availableLocations;
+  });
+};
+
+
 function resetThisWeek() {
   thisWeek = [];
   localStorage.setItem("thisWeek", JSON.stringify(thisWeek));
