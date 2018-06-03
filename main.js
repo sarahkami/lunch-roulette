@@ -64,6 +64,7 @@ innerhalb der .map funktion brauche ich eine bedingung, ob das Objekt auch in th
 
 function showAvaliableLocations(lunchLocations, thisWeek){
   var availableLocations = lunchLocations.map(function(location){
+    location = document.createElement("span");
     if(thisWeek.id === location.id){
       document.getElementById("availableLocation").className = "notAvailable";
     }

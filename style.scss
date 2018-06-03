@@ -28,7 +28,7 @@ td{ text-align: center;}
 .location-container{ height: 4em; }
 
 .centered {
-  align-items: center;
+  //align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +41,7 @@ td{ text-align: center;}
   border-radius: 12px;
   color: #fff;
   cursor: pointer;
+  font-family: "System-ui","Helvetica","Arial", sans-serif;
   font-size: 1em;
   letter-spacing: 2;
   line-height: 45px;
@@ -60,7 +61,18 @@ td{ text-align: center;}
   }
 }
 
+input {
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+}
+
 .weekly-table{
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2em auto;
+  //margin-left: auto;
+  //margin-right: auto;
 }
