@@ -76,3 +76,11 @@ input[type=number]::-webkit-outer-spin-button {
   //margin-left: auto;
   //margin-right: auto;
 }
+
+.notAvailable{
+  text-decoration: line-through;
+}
+
+.notInTime{
+  color: red;
+}

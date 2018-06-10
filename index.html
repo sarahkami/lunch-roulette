@@ -19,7 +19,8 @@
       </span>
       <span>
         <label for="chooseAvailableTime">Verfügbare Zeit</label>
-        <input id="chooseAvailableTime" type="number" value="60"/>
+        <span id="availableTime">60 min</span>
+        <input id="chooseAvailableTime" type="range" min="30" max="60" step="15" value="60"/>
       </span>
     </div>
     <table class="weekly-table">
@@ -60,6 +61,8 @@
     </table>
     <div id="availableLocations">
     </div>
+    <script type="text/javascript" src="promise.js"></script>
+    <script type="text/javascript" src="fetch.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

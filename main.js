@@ -8,6 +8,7 @@ fetch("http://localhost:8000/locations.json")
   lunchLocations = locations;
   //displays the weekley selection initially
   showWeeklySelection(thisWeek);
+  showAvaliableLocations(lunchLocations, thisWeek);
 })
 
 /*
@@ -56,20 +57,21 @@ function showWeeklySelection(thisWeek){
   });
 };
 
-/* funktion wo ich alle objekte aus lunchLocations in dem div (id="availableLocations") als einzelne span ausgeben lassen.
-mit Hilfe von .map funktion wird ein neues Array erzeugt
-map.(...ein <span> pro Element ausgeben...).join()
-innerhalb der .map funktion brauche ich eine bedingung, ob das Objekt auch in thisWeek ist, dann setze eine bestimmte Klasse
-*/
-
 function showAvaliableLocations(lunchLocations, thisWeek){
+  var includeVisitedLocations = document.getElementById("includeVisitedLocations").checked;
+  var availableTime = parseInt(document.getElementById("chooseAvailableTime").value);
   var availableLocations = lunchLocations.map(function(location){
-    location = document.createElement("span");
-    if(thisWeek.id === location.id){
-      document.getElementById("availableLocation").className = "notAvailable";
+    var locationSpan = document.createElement("span");
+    locationSpan.innerText = location.name;
+    if(thisWeek.includes(location.id) && !includeVisitedLocations){
+      locationSpan.classList.add("notAvailable");
     }
-    return availableLocations;
+    if(availableTime < location.duration){
+      locationSpan.classList.add("notInTime");
+    }
+    return locationSpan.outerHTML;
   });
+  document.getElementById("availableLocations").innerHTML = availableLocations.join(" ");
 };
 
 
@@ -87,6 +89,7 @@ function handleLocationButtonClick(){
     var availableTime = parseInt(document.getElementById("chooseAvailableTime").value);
     var chosenLocation = selectLocation(filterByDuration(lunchLocations, availableTime), thisWeek, document.getElementById("includeVisitedLocations").checked);
     showWeeklySelection(thisWeek);
+    showAvaliableLocations(lunchLocations, thisWeek);
     if(chosenLocation){
       document.getElementById("chosenLocation").innerText = chosenLocation.name;
     };
@@ -97,3 +100,19 @@ function handleLocationButtonClick(){
 
 document.getElementById("chooseLocationButton")
         .addEventListener("click", handleLocationButtonClick);
+
+document.getElementById("chooseAvailableTime")
+        .addEventListener("change", function(e){
+          showAvaliableLocations(lunchLocations, thisWeek);
+          document.getElementById("availableTime").innerText = e.target.value + " min";
+        });
+
+document.getElementById("includeVisitedLocations")
+        .addEventListener("change", function(){
+          showAvaliableLocations(lunchLocations, thisWeek);
+        });
+
+/*
+TODO: Array mit Menschen. Alle haben drei Wahlmöglichkeiten (Hardcoded)
+gewichtete Zufalls-Auswahl
+ */
