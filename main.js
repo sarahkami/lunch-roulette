@@ -9,6 +9,7 @@ fetch("http://localhost:8000/locations.json")
   //displays the weekley selection initially
   showWeeklySelection(thisWeek);
   showAvaliableLocations(lunchLocations, thisWeek);
+  populateSelect(lunchLocations, thisWeek);
 })
 
 /*
@@ -74,6 +75,21 @@ function showAvaliableLocations(lunchLocations, thisWeek){
   document.getElementById("availableLocations").innerHTML = availableLocations.join(" ");
 };
 
+function populateSelect(lunchLocations, thisWeek) {
+  var availableTime = parseInt(document.getElementById("chooseAvailableTime").value);
+  var includeVisitedLocations = document.getElementById("includeVisitedLocations").checked;
+  var filteredLocations = filterVisitedLocations(filterByDuration(lunchLocations, availableTime), includeVisitedLocations ? [] : thisWeek);
+
+
+  var selectOptionsString = filteredLocations.map(function(location) {
+    return "<option>" + location.name + "</option>";
+  }).join("");
+
+  document.getElementById("select1").innerHTML = selectOptionsString;
+  document.getElementById("select2").innerHTML = selectOptionsString;
+  document.getElementById("select3").innerHTML = selectOptionsString;
+}
+
 
 function resetThisWeek() {
   thisWeek = [];
@@ -98,8 +114,25 @@ function handleLocationButtonClick(){
   }
 };
 
+function handleSelectButtonClick(){
+  var selection1 = document.getElementById("select1");
+  var selection2 = document.getElementById("select2");
+  var selection3 = document.getElementById("select3");
+
+  var selectionText1 = selection1.options[selection1.selectedIndex].text;
+  var selectionText2 = selection2.options[selection2.selectedIndex].text;
+  var selectionText3 = selection3.options[selection3.selectedIndex].text;
+
+  //fetch mit Post - Daten zum Server schicken, Name der Person muss noch mit rein, beim Format Markus fragen, wie es sein soll
+  console.log(JSON.stringify({value1 : selectionText1, value2 : selectionText2, value3: selectionText3}));
+  return JSON.stringify({value1 : selectionText1, value2 : selectionText2, value3: selectionText3});
+};
+
 document.getElementById("chooseLocationButton")
         .addEventListener("click", handleLocationButtonClick);
+
+document.getElementById("sendSelection")
+        .addEventListener("click", handleSelectButtonClick);
 
 document.getElementById("chooseAvailableTime")
         .addEventListener("change", function(e){
